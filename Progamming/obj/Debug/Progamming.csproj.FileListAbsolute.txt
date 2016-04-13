@@ -1,0 +1,16 @@
+E:\C#\Progamming\Progamming\bin\Debug\Progamming.exe.config
+E:\C#\Progamming\Progamming\bin\Debug\Progamming.exe
+E:\C#\Progamming\Progamming\bin\Debug\Progamming.pdb
+E:\C#\Progamming\Progamming\obj\Debug\Progamming.csprojResolveAssemblyReference.cache
+E:\C#\Progamming\Progamming\obj\Debug\Progamming.MainForm.resources
+E:\C#\Progamming\Progamming\obj\Debug\Progamming.Properties.Resources.resources
+E:\C#\Progamming\Progamming\obj\Debug\Progamming.csproj.GenerateResource.Cache
+E:\C#\Progamming\Progamming\obj\Debug\Progamming.exe
+E:\C#\Progamming\Progamming\obj\Debug\Progamming.pdb
+E:\C#\Progamming\Progamming\obj\Debug\Progamming.ResourceGUI.resources
+E:\C#\Progamming\Progamming\obj\Debug\Progamming.PropertyUserControl.ResourcePropertyGrid.resources
+E:\C#\Progamming\Progamming\obj\Debug\Progamming.PropertyUserControl.SpriteProperty.resources
+E:\C#\Progamming\Progamming\obj\Debug\Progamming.PropertyUserControl.SceneProperty.resources
+E:\C#\Progamming\Progamming\obj\Debug\Progamming.PropertyUserControl.ScriptProperty.resources
+E:\C#\Progamming\Progamming\obj\Debug\Progamming.PropertyUserControl.SoundProperty.resources
+E:\C#\Progamming\Progamming\obj\Debug\Progamming.PropertyUserControl.FontProperty.resources

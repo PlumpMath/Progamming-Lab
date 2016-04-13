@@ -1,0 +1,5 @@
+E:\C#\Progamming\ScriptAPI\bin\Debug\ScriptAPI.dll
+E:\C#\Progamming\ScriptAPI\bin\Debug\ScriptAPI.pdb
+E:\C#\Progamming\ScriptAPI\obj\Debug\ScriptAPI.csprojResolveAssemblyReference.cache
+E:\C#\Progamming\ScriptAPI\obj\Debug\ScriptAPI.dll
+E:\C#\Progamming\ScriptAPI\obj\Debug\ScriptAPI.pdb
