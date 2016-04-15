@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Sprites");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Sounds");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Fonts");
@@ -48,10 +49,11 @@
             this.windowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tvResources = new System.Windows.Forms.TreeView();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pForms = new System.Windows.Forms.Panel();
+            this.cmsResSprite = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.resourcePropertyGrid = new Progamming.PropertyUserControl.ResourcePropertyGrid();
             this.mainMenuStrip.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pForms.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainMenuStrip
@@ -115,6 +117,8 @@
             // tvResources
             // 
             this.tvResources.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tvResources.FullRowSelect = true;
+            this.tvResources.ItemHeight = 18;
             this.tvResources.Location = new System.Drawing.Point(0, 24);
             this.tvResources.Name = "tvResources";
             treeNode1.Name = "nodeSprites";
@@ -134,15 +138,22 @@
             this.tvResources.Size = new System.Drawing.Size(158, 403);
             this.tvResources.TabIndex = 2;
             this.tvResources.DoubleClick += new System.EventHandler(this.tvResources_DoubleClick);
+            this.tvResources.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tvResources_MouseDown);
             // 
-            // panel1
+            // pForms
             // 
-            this.panel1.Controls.Add(this.resourcePropertyGrid);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(158, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(628, 403);
-            this.panel1.TabIndex = 3;
+            this.pForms.Controls.Add(this.resourcePropertyGrid);
+            this.pForms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pForms.Location = new System.Drawing.Point(158, 24);
+            this.pForms.Name = "pForms";
+            this.pForms.Size = new System.Drawing.Size(628, 403);
+            this.pForms.TabIndex = 3;
+            // 
+            // cmsResSprite
+            // 
+            this.cmsResSprite.Name = "cmsResSprite";
+            this.cmsResSprite.Size = new System.Drawing.Size(61, 4);
+            this.cmsResSprite.Text = "Sprite";
             // 
             // resourcePropertyGrid
             // 
@@ -159,7 +170,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 427);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pForms);
             this.Controls.Add(this.tvResources);
             this.Controls.Add(this.mainMenuStrip);
             this.Font = new System.Drawing.Font("맑은 고딕", 9F);
@@ -168,7 +179,7 @@
             this.Text = "Progamming";
             this.mainMenuStrip.ResumeLayout(false);
             this.mainMenuStrip.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.pForms.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,8 +196,9 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.MenuStrip mainMenuStrip;
         private System.Windows.Forms.TreeView tvResources;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pForms;
         private PropertyUserControl.ResourcePropertyGrid resourcePropertyGrid;
+        private System.Windows.Forms.ContextMenuStrip cmsResSprite;
     }
 }
 

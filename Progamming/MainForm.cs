@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Progamming.Resource;
 
 namespace Progamming
 {
@@ -31,27 +32,51 @@ namespace Progamming
             #endregion
         }
 
-        private void tvResources_DoubleClick(object sender, EventArgs e)
+        private ResourceType ResourceTypeFromNode(TreeNode node)
         {
-            switch(tvResources.SelectedNode.Text) // 이걸 Parent 노드를 계산 하는 걸로
+            TreeNode temp = node;
+            if (temp.Parent != null)
+                while (temp.FirstNode != temp.Parent.Parent)
+                {
+                    temp = temp.Parent;
+                }
+            
+
+            switch (temp.Text)
             {
                 case "Sprites":
-                    this.resourcePropertyGrid.ChangeResource(ResourceType.SPRITE);
-                    break;
+                    return ResourceType.SPRITE;
                 case "Sounds":
-                    this.resourcePropertyGrid.ChangeResource(ResourceType.SOUND);
-                    break;
+                    return ResourceType.SOUND;
                 case "Fonts":
-                    this.resourcePropertyGrid.ChangeResource(ResourceType.FONT);
-                    break;
+                    return ResourceType.FONT;
                 case "Scripts":
-                    this.resourcePropertyGrid.ChangeResource(ResourceType.SCRIPT);
-                    break;
+                    return ResourceType.SCRIPT;
                 case "Scenes":
-                    this.resourcePropertyGrid.ChangeResource(ResourceType.SCENE);
-                    break;
+                    return ResourceType.SCENE;
             }
+
+            throw new Exception("No such that node");
+        }
+
+        private void tvResources_DoubleClick(object sender, EventArgs e)
+        {
+            this.resourcePropertyGrid.ChangeResource(ResourceTypeFromNode(this.tvResources.SelectedNode));
+        }
+
+        private void tvResources_MouseDown(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Right)
+            {
+                
+            }
+        }
+
+        private void showForm(Form form)
+        {
+            form.Parent = this.pForms;
+            form.TopLevel = false;
+            form.Show();
         }
     }
 }
- 

@@ -28,18 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.tcProperty = new System.Windows.Forms.TabControl();
+            this.tpGeneral = new System.Windows.Forms.TabPage();
+            this.tcProperty.SuspendLayout();
             this.SuspendLayout();
             // 
-            // spritesProterty
+            // tcProperty
+            // 
+            this.tcProperty.AllowDrop = true;
+            this.tcProperty.Controls.Add(this.tpGeneral);
+            this.tcProperty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tcProperty.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.tcProperty.Location = new System.Drawing.Point(0, 0);
+            this.tcProperty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tcProperty.Multiline = true;
+            this.tcProperty.Name = "tcProperty";
+            this.tcProperty.SelectedIndex = 0;
+            this.tcProperty.Size = new System.Drawing.Size(178, 444);
+            this.tcProperty.TabIndex = 2;
+            // 
+            // tpGeneral
+            // 
+            this.tpGeneral.Location = new System.Drawing.Point(4, 24);
+            this.tpGeneral.Name = "tpGeneral";
+            this.tpGeneral.Padding = new System.Windows.Forms.Padding(3);
+            this.tpGeneral.Size = new System.Drawing.Size(170, 416);
+            this.tpGeneral.TabIndex = 0;
+            this.tpGeneral.Text = "General";
+            this.tpGeneral.UseVisualStyleBackColor = true;
+            // 
+            // FontProperty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "spritesProterty";
-            this.Size = new System.Drawing.Size(178, 355);
+            this.Controls.Add(this.tcProperty);
+            this.Name = "FontProperty";
+            this.Size = new System.Drawing.Size(178, 444);
+            this.tcProperty.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.TabControl tcProperty;
+        private System.Windows.Forms.TabPage tpGeneral;
     }
 }
